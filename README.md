@@ -26,168 +26,179 @@ Publish the website in the given URL.
 
 ## PROGRAM :
 ```
-[Uploading res<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delicious Bites - Restaurant</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Quicksand', sans-serif;
-    }
-
-    body {
-      background: #f8f8f8;
-      color: #441e1e;
-    }
-
-    header {
-      background-image: url('C:\Users\admin\Videos\New folder\restweb\rest\restapp\static\images.png\bgrest.png');
-      background-size: cover;
-      background-position: center;
-      color: rgb(191, 204, 165);
-      text-align: center;
-      padding: 80px 20px;
-    }
-
-    nav {
-      background: #333;
-      color: rgb(195, 176, 176);
-      display: flex;
-      justify-content: space-around;
-      padding: 10px 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .search-bar {
-      text-align: center;
-      margin: 20px;
-    }
-
-    .search-bar input {
-      padding: 10px;
-      width: 300px;
-      border: 1px solid #75dca5;
-      border-radius: 4px;
-    }
-
-    .section {
-      padding: 40px 20px;
-    }
-
-    .menu-items {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .dish {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(212, 141, 86, 0.1);
-      width: 250px;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .dish img {
-      width: 100%;
-      border-radius: 10px;
-      height: 150px;
-      object-fit: cover;
-    }
-
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Palessi Comfort Wear</title>
+    <style>
+        h1 {
+            color: #0abab5;
+            text-shadow: 0 0 10px white, 0 0 20px #b2ffff;
+            position: relative;
+            bottom: 10px;
+            font-family: 'Georgia', serif;
+            font-size: 45px;
+        }
+        html {
+            background-color: #c982e8;
+        }
+        body {
+            background: radial-gradient(white, #9d40df);
+            border-radius: 30px;
+            height: 850px;
+            width: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        .main {
+            background-color: white;
+            height: 80%;
+            width: 70%;
+            border-radius: 20px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 20px #cfe966;
+        }
+        .m1 {
+            background-color: #d1e389;
+            margin: 10px;
+            height: 650px;
+            width: 900px;
+            display: flex;
+            flex-wrap: wrap;
+            overflow-y: scroll;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            transition: all 1.5s ease;
+        }
+        .m1::-webkit-scrollbar {
+            width: 6px;
+        }
+        .m1::-webkit-scrollbar-thumb {
+            background: #c11deb;
+            border-radius: 10px;
+        }
+        .m2 {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            margin: 10px;
+            opacity: 0;
+            width: 0px;
+            height: 0px;
+            transition: all 1.5s ease, opacity 0.4s;
+            visibility: hidden;
+        }
+        img {
+            margin: 10px;
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            cursor: pointer;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+        #ii {
+            border-radius: 12px;
+            width: 100%;
+            height: auto;
+        }
+        .m1.shrink {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 350px;
+            overflow-y: scroll;
+            transition: all 1.5s ease;
+        }
+        .m2.grow {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 650px;
+            height: 650px;
+            opacity: 1;
+            visibility: visible;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer {
+            background-color: white;
+            border-radius: 20px;
+            width: 30%;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-family: 'Georgia', serif;
+            color: #905bf3;
+            padding: 10px;
+            box-shadow: 0 0 10px #9333d3;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to Delicious Bites</h1>
-    <p>Your go-to place for amazing food!</p>
-  </header>
+    <h1 align="center"></h1>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#menu">Menu</a>
-    <a href="#contact">Contact</a>
-    <a href="#location">Location</a>
-  </nav>
-
-  <div class="search-bar">
-    <input type="text" placeholder="Search for dishes...">
-  </div>
-
-  <section class="section" id="home">
-    <h2>About Us</h2>
-    <p>Delicious Bites offers a variety of mouth-watering dishes made with the freshest ingredients. Join us for a memorable dining experience.Get offers on our exclusive cuisine and get the best offers on our premium beverages</p>
-  </section>
-
-  <section class="section" id="menu">
-    <h2>Our Menu</h2>
-    <div class="menu-items">
-      <div class="dish">
-        <img src="C: restaurant/calciapp/static/png-transparent-pizza-margherita-sushi-pizza-pizza-delivery-pizza.png  " alt="Pizza">
-        <h3>Pizza</h3>
-        <p>Pizza is a classic Italian dish loved worldwide, featuring a crispy crust topped with savory ingredients like cheese, sauce, and various meats or veggies.</p>
-      </div>
-      <div class="dish">
-        <img src="C:restaurant/calciapp/static/pngtree-sushi-set-on-plate-png-image_13126480.png" alt ="Sushi">
-        <h3>Sushi</h3>
-        <p> A popular Japanese dish made with vinegared rice and various ingredients, such as raw fish, vegetables, and seafood, often wrapped in seaweed</p>
-      </div>
-      <div class="dish">
-        <img src="C: restaurant/calciapp/static/pngtree-mexican-taco-crepes-with-lemon-sauce-psd-transparent-png-image_6720528.png " alt="Tacos">
-        <h3>Tacos</h3>
-        <p>A delicious Mexican dish consisting of a small, folded corn tortilla filled with various ingredients, such as seasoned meats</p>
-      </div>
+    <div class="main">
+        <div class="m1">
+            <img src="C:\Users\admin\exp8\calcapp\static\shirt.jpg" alt="Shirt" onclick="f(this)">
+            <img src="C:\Users\admin\exp8\calcapp\static\image.png" alt="Skirts" onclick="f(this)">
+            <img src="C:\Users\admin\exp8\image.png" alt="Long Gowns" onclick="f(this)">
+            <img src="C:\Users\admin\exp8\Screenshot 2025-05-29 120850.png" alt="T-Shirts" onclick="f(this)">
+            <img src="C:\Users\admin\exp8\Screenshot 2025-05-29 121657.png" alt="Hoodie" onclick="f(this)">
+            <img src="C:\Users\admin\exp8\Screenshot 2025-05-29 122208.png" alt="Pant" onclick="f(this)">
+        </div>
+        <div class="m2" id="iii" onclick="c()">
+            <img src="" alt="Zoomed View" id="ii">
+        </div>
     </div>
-  </section>
+    <footer>
+        DESIGNED & DEVELOPED by Varshinee.S
+    </footer>
 
-  <section class="section" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: contact@deliciousbites.com</p>
-    <p>Phone: +91-9563543210</p>
-  </section>
 
-  <section class="section" id="location">
-    <h2>Our Location</h2>
-    <p>123 Food Street, Flavor Town, India</p>
-  </section>
 
-  <footer>
-    &copy; Developed by Varshinee.S
-  </footer>
+    <script>
+        var a = document.getElementById('iii');
+        var b = document.getElementById('ii');
+        const d = document.querySelector('.m1');
+        const d1 = document.querySelector('.m2');
+
+        function f(img) {
+            d1.classList.add('grow');
+            d.classList.add('shrink');
+            b.src = img.src;
+        }
+
+        function c() {
+            d1.classList.remove('grow');
+            d.classList.remove('shrink');
+        }
+    </script>
 </body>
-</html>t.html…]()
-
-
+</html>
 ```
 
 ## OUTPUT:
 
-![Screenshot 2025-05-28 230241](https://github.com/user-attachments/assets/a4ee8f17-a52b-458f-aa77-709c87c7deed)
+![image](https://github.com/user-attachments/assets/8e1d3332-e97e-48cd-acff-f0af53bf0219)
+
+
+![image](https://github.com/user-attachments/assets/a757ed5e-4c61-4e1b-961f-1be59ce9a73a)
 
 
 
